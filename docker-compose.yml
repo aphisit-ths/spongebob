@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  ysss:
+    build: .  # Build from the current directory
+    ports:
+      - "3000:3000"  # Map container port to host port
+    volumes:
+      - ./public:/app/public:ro  # Mount public directory with read-only access
+    environment:
+      - NODE_ENV=production  # Set environment for development
+
+  # Add additional services here if needed
